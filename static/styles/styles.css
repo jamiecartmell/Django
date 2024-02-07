@@ -1,0 +1,55 @@
+:root {
+    --color-main: #179bcf;
+    --color-main-light: #c68535;
+    --color-dark: #3D424A;
+    --color-dark-medium: #c0c0be;
+    --color-dark-light: #E6E5DE;
+    --color-light: #F1916D;
+    --color-text: #202022;
+    --test-colour: #fcfcfc;
+}
+
+
+
+.background {
+    color: var(--color-text);
+    background-color: var(--color-dark-medium);
+}
+
+/* body {
+    color: var();
+    background-color: var(--color-dark);
+} */
+/* ===Globals== */
+.highlighted {
+    color: var(--color-main);
+}
+
+
+/* ===Website/home== */
+.website-home-container {
+    color: var(--color-text);
+    background-color: var(--color-dark-light);
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.job-card-container {
+    border-radius: 30px;
+    background-color: var(--color-dark-light);
+    padding: 20px;
+}
+
+.card-body-bottom {
+    color: var(--color-text);
+    background-color: var(--test-colour);
+    padding: 20px;
+}
+
+/* ===All Jobs=== */
+.main-aj-panel {
+    color: var(--color-text);
+    background-color: var(--color-dark-light);
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
