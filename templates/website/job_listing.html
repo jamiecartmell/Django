@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% load humanize %}
-
 {% block content %}
 
-<section class="main-aj-panel">
+<section class="main-panel-website">
     <div class="p-5 mb-4 rounded-3">
         <div class="container-fluid py-5">
-            <h2 class="display-5 fw-bold"><span class="highlighted">WorkForce:</span> Join the force</h2>
+            <h2 class="display-5 fw-bold"><span class="highlighted">WorkForce:</span> Join the Force</h2>
             <p class="col-md-8 fs-2 mt-3">
                 All Available Jobs
             </p>
@@ -23,7 +21,7 @@
         <div class="card h-100">
             <div class="card-body-bottom">
                 <h5 class="card-title">{{job.title}}</h5>
-                <p class="card-text">Job Location: {{job.location}}</p>
+                <p class="card-text">Job Location: {{job.state}}</p>
                 <p class="card-text">€{{job.salary|intcomma}}</p>
                 <p class="card-text">Posted by: {{job.company}}</p>
                 <a class="btn btn-primary btn-sm" href="{% url 'job-details' job.pk %}">View Details</a>
