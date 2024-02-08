@@ -27,17 +27,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "45d9be0f39c941ada69d9e0a4c9e16f4")
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# DEBUG = True
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+DEBUG = True
+# DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
-if ALLOWED_HOSTS:
-    ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS.split(",")]
-else:
-    ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
+# if ALLOWED_HOSTS:
+#     ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS.split(",")]
+# else:
+#     ALLOWED_HOSTS = []
 
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
