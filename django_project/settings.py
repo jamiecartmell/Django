@@ -31,8 +31,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "45d9be0f39c941ada69d9e0a4c9e16f4")
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
-if ALLOWED_HOSTS is not None:
-    ALLOWED_HOSTS = ALLOWED_HOSTS.split(",")
+if ALLOWED_HOSTS:
+    ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS.split(",")]
 else:
     ALLOWED_HOSTS = []
 
@@ -101,13 +101,13 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-# "default": dj_database_url.parse(
-#      "postgres://workforce_database_user:8Z2XHRsgfF7eaXuz3Z9f79veQy5mSWys@dpg-cn29cced3nmc739bhvr0-a.frankfurt-postgres.render.com/workforce_database"
-#   )
-# }
-database_url = os.environ.get("DATABASE_URL")
-DATABASES["default"] = dj_database_url.parse(database_url)
+DATABASES = {
+    "default": dj_database_url.parse(
+        "postgres://workforce_database_user:8Z2XHRsgfF7eaXuz3Z9f79veQy5mSWys@dpg-cn29cced3nmc739bhvr0-a.frankfurt-postgres.render.com/workforce_database"
+    )
+}
+# database_url = os.environ.get("DATABASE_URL")
+# DATABASES["default"] = dj_database_url.parse(database_url)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
