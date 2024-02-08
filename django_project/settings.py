@@ -23,12 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = "django-insecure-!d#tj0x83*9qt-r$*er-+ykz)9^^t*6nkvp2im)(!^xfdotac)"
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY", "your_default_secret_key_here")
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split("")
+ALLOWED_HOSTS = [
+    host.strip()
+    for host in os.environ.get("ALLOWED_HOSTS", "").split(",")
+    if host.strip()
+]
 
 
 # ALLOWED_HOSTS = ["workforce-app-pe3c.onrender.com"]
@@ -95,7 +99,7 @@ DATABASES = {
     }
 }
 database_url = os.environ.get("DATABASE_URL")
-DATABASES["default"] = dj_database_url.parse("database_url")
+DATABASES = {"default": dj_database_url.parse(database_url)}
 
 # postgres://workforce_database_user:8Z2XHRsgfF7eaXuz3Z9f79veQy5mSWys@dpg-cn29cced3nmc739bhvr0-a.frankfurt-postgres.render.com/workforce_database
 # Password validation
