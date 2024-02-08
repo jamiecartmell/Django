@@ -26,7 +26,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                {% if request.user.is_authenticated %} {% if request.user.is_applicant%}
+                {% if request.user.is_authenticated %} {% if
+                request.user.is_applicant%}
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'dashboard'%}">Home</a>
@@ -54,7 +55,7 @@
                 {% elif request.user.is_recruiter %}
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'dashboard'%}">Home</a>
                     </li>
                     {% if request.user.has_company %}
                     <li class="nav-item">
@@ -95,7 +96,6 @@
             <b>{{message}}</b>
         </div>
         {% endfor %} {% endif %} {% block content %} {% endblock content %}
-
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
