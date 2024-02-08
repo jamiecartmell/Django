@@ -37,7 +37,17 @@ DEBUG = True
 #     ALLOWED_HOSTS = []
 
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
+
+# Split the comma-separated string of hosts into a list
+if ALLOWED_HOSTS:
+    ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS.split(",")]
+else:
+    ALLOWED_HOSTS = []
+
+# Add 'django-workforce.onrender.com' to the list of allowed hosts
+ALLOWED_HOSTS.append("django-workforce.onrender.com")
 
 
 # Application definition
