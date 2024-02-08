@@ -41,7 +41,7 @@ def update_job(request, pk):
     else:
         form = UpdateJobForm(instance=job)
         context = {"form": form}
-        return render(request, "job/update_job.html", context)
+        return render(request, "work/update_job.html", context)
 
 
 def manage_jobs(request):

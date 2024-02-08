@@ -1,4 +1,4 @@
-/* :root {
+:root {
     --color-main: #179bcf;
     --color-main-light: #c68535;
     --color-dark: #3D424A;
@@ -7,9 +7,9 @@
     --color-light: #F1916D;
     --color-text: #202022;
     --test-colour: #fcfcfc;
-} */
+}
 
-:root {
+/* :root {
     --color-main: #71c6dd;
     --color-main-light: #e1f6fb;
     --color-dark: #3f4156;
@@ -22,7 +22,7 @@
     --color-success: #5dd693;
     --color-error: #fc4b0b;
     --test-colour: #430b37;
-}
+} */
 
 
 
@@ -93,6 +93,31 @@
     background-color: var(--color-dark-light);
 }
 
-.table-border {
+/* .table-border {
     border: 2px solid red;
+} */
+
+/* === update company === */
+.company-panel {
+    border-radius: 20px;
+    background-color: var(--color-dark-light);
+    padding: 30px;
 }
+
+.up-company-form {
+    background-color: var(--color-dark-light);
+}
+
+/* === Create job ad/ update job === */
+.create-job-panel {
+    border-radius: 20px;
+    background-color: var(--color-dark-light);
+    padding: 30px;
+
+}
+
+.job-create-form {
+    background-color: var(--color-dark-light);
+}
+
+/* === manage job === */
