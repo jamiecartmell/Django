@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import dj_database_url
 import os
 from pathlib import Path
 
@@ -90,7 +91,11 @@ DATABASES = {
     }
 }
 
+DATABASES["default"] = dj_database_url.parse(
+    "postgres://workforce_database_user:8Z2XHRsgfF7eaXuz3Z9f79veQy5mSWys@dpg-cn29cced3nmc739bhvr0-a.frankfurt-postgres.render.com/workforce_database"
+)
 
+# postgres://workforce_database_user:8Z2XHRsgfF7eaXuz3Z9f79veQy5mSWys@dpg-cn29cced3nmc739bhvr0-a.frankfurt-postgres.render.com/workforce_database
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
