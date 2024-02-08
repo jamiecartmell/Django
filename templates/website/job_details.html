@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<div>
+<!-- <div>
     <section>
         <h5>Job Requiements</h5>
         <p>{{job.requirements}}</p>
@@ -36,23 +36,10 @@
         <h5>Ideal Candidate</h5>
         <p>{{job.ideal_candidate}}</p>
     </section>
-</div>
+</div> -->
 <br />
 
 <div class="row row-cols-1 row-cols-md-3 g-4 job-card-container">
-    <div class="col">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Other Details</h5>
-                <p class="card-text">
-                    {{job.ideal_candidate}}
-                </p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-    </div>
     <div class="col">
         <div class="card h-100">
             <div class="card-body">
@@ -69,12 +56,23 @@
     <div class="col">
         <div class="card h-100">
             <div class="card-body">
-                <h5 class="card-title">Related Jobs</h5>
+                <h5 class="card-title">Job Requiements</h5>
                 <p class="card-text">
-                    This is a wider card with supporting text below as a natural lead-in
-                    to additional content. This card has even longer content than the
-                    first to show that equal height action.
+                    {{job.requirements}}
                 </p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Ideal Canidate</h5>
+                <p class="card-text">
+                    {{job.ideal_candidate}}
             </div>
             <div class="card-footer">
                 <small class="text-muted">Last updated 3 mins ago</small>
