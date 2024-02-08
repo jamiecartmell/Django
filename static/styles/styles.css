@@ -1,0 +1,123 @@
+:root {
+    --color-main: #179bcf;
+    --color-main-light: #c68535;
+    --color-dark: #3D424A;
+    --color-dark-medium: #c0c0be;
+    --color-dark-light: #E6E5DE;
+    --color-light: #F1916D;
+    --color-text: #202022;
+    --test-colour: #fcfcfc;
+}
+
+/* :root {
+    --color-main: #71c6dd;
+    --color-main-light: #e1f6fb;
+    --color-dark: #3f4156;
+    --color-dark-medium: #51546e;
+    --color-dark-light: #696d97;
+    --color-light: #e5e5e5;
+    --color-gray: #8b8b8b;
+    --color-light-gray: #b2bdbd;
+    --color-bg: #2d2d39;
+    --color-success: #5dd693;
+    --color-error: #fc4b0b;
+    --test-colour: #430b37;
+} */
+
+
+
+/* ===Globals== */
+.highlighted {
+    color: var(--color-main);
+}
+
+.background {
+    color: var(--color-text);
+    background-color: var(--color-dark-medium);
+}
+
+/* ===Website/home== */
+.website-home-container {
+    color: var(--color-text);
+    background-color: var(--color-dark-light);
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.job-card-container {
+    border-radius: 30px;
+    background-color: var(--color-dark-light);
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.card-body-bottom {
+    color: var(--color-text);
+    background-color: var(--test-colour);
+    padding: 20px;
+}
+
+/* ===All Jobs=== */
+.main-panel-website {
+    color: var(--color-text);
+    background-color: var(--color-dark-light);
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+/* ===job details=== */
+
+
+
+/* === login === */
+.login-panel {
+    border-radius: 20px;
+    background-color: var(--color-dark-light);
+}
+
+/* === dashboard === */
+.dashboard-panel {
+    border-radius: 30px;
+    background-color: var(--color-dark-light);
+    padding: 20px;
+}
+
+/* === resume === */
+.resume-panel {
+    border-radius: 20px;
+    background-color: var(--color-dark-light);
+    padding: 30px;
+}
+
+.resume-form {
+    background-color: var(--color-dark-light);
+}
+
+/* .table-border {
+    border: 2px solid red;
+} */
+
+/* === update company === */
+.company-panel {
+    border-radius: 20px;
+    background-color: var(--color-dark-light);
+    padding: 30px;
+}
+
+.up-company-form {
+    background-color: var(--color-dark-light);
+}
+
+/* === Create job ad/ update job === */
+.create-job-panel {
+    border-radius: 20px;
+    background-color: var(--color-dark-light);
+    padding: 30px;
+
+}
+
+.job-create-form {
+    background-color: var(--color-dark-light);
+}
+
+/* === manage job === */
