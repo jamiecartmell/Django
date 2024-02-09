@@ -1,8 +1,6 @@
 {% extends 'users/base.html' %}
 {% load static %}
-
 {% load widget_tweaks %}
-
 {% block content %}
 
 <form class="p-4 p-md-5 border  login-panel " method="POST">
@@ -22,7 +20,6 @@
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
     <hr class="my-4">
-    <!-- <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small> -->
     <small class="text-muted">Already have an account? <a href="{% url 'login' %}">Sign In</a></small>
 </form>
 
